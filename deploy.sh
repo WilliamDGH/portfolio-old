@@ -1,6 +1,6 @@
 #!/bin/bash
 cd ~/portfolio
 git pull origin main
-yarn install &&
-yarn build &&
+npm install &&
+npm run build &&
 pm2 restart [name]
