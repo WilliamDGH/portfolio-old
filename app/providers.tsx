@@ -5,7 +5,6 @@ import { ReactNode } from "react";
 
 interface Props {
   children?: ReactNode
-  // any props that come into the component
 }
 
 export function Providers({ children }: Props) {
