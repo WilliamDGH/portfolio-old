@@ -1,11 +1,10 @@
-version: 0.2
+version: 0.3
 
 phases:
   install:
     commands:
       - echo Installing dependency...
-      - npm install -g next
-      - yarn
+      - yarn install
   pre_build:
     commands:
       - printenv > .env
