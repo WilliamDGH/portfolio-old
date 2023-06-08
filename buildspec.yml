@@ -1,17 +1,17 @@
-version: 0.3
+version: 0.2
 
 phases:
   install:
     commands:
       - echo Installing dependency...
-      - yarn install
+      - npm install
   pre_build:
     commands:
       - printenv > .env
   build:
     commands:
       - echo Compiling the Node.js code
-      - yarn build
+      - npm run build
   post_build:
     commands:
       - echo Build completed on `date`
