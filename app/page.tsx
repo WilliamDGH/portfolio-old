@@ -16,28 +16,32 @@ import data from "../data/portfolio.json";
 
 export default function Home() {
   // Ref
-  const workRef = useRef();
-  const aboutRef = useRef();
-  const textOne = useRef();
-  const textTwo = useRef();
-  const textThree = useRef();
-  const textFour = useRef();
+  const workRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const textOne = useRef<HTMLDivElement>(null);
+  const textTwo = useRef<HTMLDivElement>(null);
+  const textThree = useRef<HTMLDivElement>(null);
+  const textFour = useRef<HTMLDivElement>(null);
 
   // Handling Scroll
   const handleWorkScroll = () => {
-    window.scrollTo({
-      top: workRef.current.offsetTop,
-      left: 0,
-      behavior: "smooth",
-    });
+    if (workRef.current) {
+      window.scrollTo({
+        top: workRef.current.offsetTop,
+        left: 0,
+        behavior: "smooth",
+      });
+    }
   };
 
   const handleAboutScroll = () => {
-    window.scrollTo({
-      top: aboutRef.current.offsetTop,
-      left: 0,
-      behavior: "smooth",
-    });
+    if (aboutRef.current) {
+      window.scrollTo({
+        top: aboutRef.current?.offsetTop,
+        left: 0,
+        behavior: "smooth",
+      });
+    }
   };
 
   useIsomorphicLayoutEffect(() => {
@@ -120,14 +124,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-        {/* This button should not go into production */}
-        {process.env.NODE_ENV === "development" && (
-          <div className="fixed bottom-5 right-5">
-            <Link href="/edit">
-              <Button type="primary">Edit Data</Button>
-            </Link>
-          </div>
-        )}
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
           <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
           <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
