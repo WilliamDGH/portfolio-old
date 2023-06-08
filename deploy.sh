@@ -5,6 +5,7 @@ export NVM_DIR="$HOME/.nvm"
 
 cd ~/portfolio || exit
 git pull origin main
+pm2 stop portfolio
 yarn &&
 yarn build &&
 pm2 restart portfolio
