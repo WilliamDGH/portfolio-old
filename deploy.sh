@@ -5,7 +5,6 @@ export NVM_DIR="$HOME/.nvm"
 
 cd ~/portfolio || exit
 git pull origin main
-npm install
-npm run build
-pm2 resurrect
+npm install &&
+npm run build &&
 pm2 restart portfolio
