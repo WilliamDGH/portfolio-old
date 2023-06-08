@@ -1,7 +1,7 @@
-import React from "react";
-import Button from "../Button";
+import React from 'react'
+import Button from '../Button'
 
-import yourData from "../../data/portfolio.json";
+import yourData from '../../data/portfolio.json'
 
 const Socials = ({ className }) => {
   return (
@@ -12,7 +12,7 @@ const Socials = ({ className }) => {
         </Button>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default Socials;
+export default Socials
