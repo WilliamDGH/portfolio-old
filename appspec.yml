@@ -1,11 +1,5 @@
   version: 0.0
   os: linux
-  files:
-    - source: /
-      destination: ~/portfolio
-      overwrite: true
-  file_exists_behavior: OVERWRITE
-
   hooks:
     BeforeInstall:
       - location: scripts/before-install.sh
