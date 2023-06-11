@@ -24,3 +24,17 @@ jobs:
           yarn install
           yarn build
           rm -r node_modules
+
+      - name: AWS CodeDeploy
+        uses: sourcetoad/aws-codedeploy-action@v1
+        with:
+          aws_access_key: ${{ secrets.AWS_SECRET_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
+          aws_region: ap-southeast-2
+          codedeploy_name: portfolio
+          codedeploy_group: producation
+          codedeploy_register_only: false
+          s3_bucket: codepipeline-ap-southeast-2-221896254501
+          s3_folder: guanhua_ding_portfol
+          max_polling_iterations: 0
+          directory: ./
