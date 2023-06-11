@@ -34,7 +34,7 @@ jobs:
           codedeploy_name: portfolio
           codedeploy_group: producation
           codedeploy_register_only: false
-          s3_bucket: codepipeline-ap-southeast-2-221896254501
-          s3_folder: guanhua_ding_portfol
+          s3_bucket: arn:aws:s3:::guanhua-ding-portfolio
+          s3_folder: deploy
           max_polling_iterations: 0
           directory: ./
