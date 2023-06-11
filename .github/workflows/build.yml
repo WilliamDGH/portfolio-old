@@ -23,7 +23,7 @@ jobs:
         run: |
           yarn install
           yarn build
-          rm -r node_modules
+          rm -rf node_modules
 
       - name: AWS CodeDeploy
         uses: sourcetoad/aws-codedeploy-action@v1
