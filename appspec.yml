@@ -3,7 +3,8 @@ os: linux
 files:
   - source: /
     destination: /var/www/next-app
-ApplicationStop:
+hooks:
+  ApplicationStop:
     - location: scripts/stop_server.sh
       timeout: 300
       runas: root
