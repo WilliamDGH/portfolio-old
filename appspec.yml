@@ -3,6 +3,8 @@ os: linux
 files:
   - source: /
     destination: /var/www/guanhua-ding-portfolio
+    overwrite: true
+file_exists_behavior: OVERWRITE
 hooks:
   ApplicationStop:
     - location: scripts/stop_server.sh
