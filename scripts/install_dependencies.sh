@@ -3,7 +3,7 @@
 cd /var/www/guanhua-ding-portfolio
 
 # Install dependencies
-yarn install --frozen-lockfile
+yarn install
 
 # Or if you are using npm, you can do:
 # npm install
